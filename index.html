@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- A Fazer -->
+        <div class="column" id="todo">
+            <h2>A Fazer</h2>
+            <ul class="task-list" id="todo-list">
+                <!-- Tarefas serão inseridas aqui -->
+            </ul>
+            <input type="text" id="taskInput" placeholder="Nova tarefa...">
+            <button onclick="addTask()">Adicionar</button>
+        </div>
+
+        <!-- Em Progresso -->
+        <div class="column" id="in-progress">
+            <h2>Em Progresso</h2>
+            <ul class="task-list" id="in-progress-list">
+                <!-- Tarefas serão inseridas aqui -->
+            </ul>
+        </div>
+
+        <!-- Concluído -->
+        <div class="column" id="completed">
+            <h2>Concluído</h2>
+            <ul class="task-list" id="completed-list">
+                <!-- Tarefas serão inseridas aqui -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Pop-up de Confirmação -->
+    <div id="confirmation-popup" class="popup-overlay">
+        <div class="popup-content">
+            <p>Deseja mesmo excluir esta tarefa?</p>
+            <button onclick="confirmDelete()">Sim, excluir</button>
+            <button class="cancel" onclick="cancelDelete()">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
